@@ -1,0 +1,19 @@
+Determine what word is being guessed. Represented as a list.
+Create a list of blanks (_) the length of the word to represent correct guesses.
+
+User guesses a letter. 
+    If the letter is in the word   
+        display it
+    else 
+        give failure message
+        draw the guy
+        reduce life
+repeat until no more life or word is guessed correctly. 
+
+
+How to check word for letter: 
+    Find indices of letter in word
+    if none
+        fail
+    if exists
+        update blanks list at same indices. 
