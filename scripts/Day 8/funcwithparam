@@ -1,0 +1,20 @@
+def greet():
+    print("Hello!")
+    print("Hi!")
+    print("Sup?")
+
+greet()
+
+def greetWithName(name):
+    print(f"Hello, {name}!")
+    print(f"Hi, {name}!")
+    print(f"Yo {name}! Sup?")
+
+greetWithName("Chabi")
+
+def greetWithNameLoc(name, location):
+    print(f"Hello, {name}!")
+    print(f"How's the weather in {location}?")
+
+greetWithNameLoc("Chabi", "Potsdam")
+greetWithNameLoc(location="Potsdam", name="Chabi")
