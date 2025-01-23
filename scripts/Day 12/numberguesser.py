@@ -16,14 +16,13 @@ while not gameover:
     guesses = 10
     correct = False
     numbertoGuess = rand.randint(1, 100)
-    print(numbertoGuess)
     print("I'm thinking of a number between 1 and 100! Can you guess what it is? I'll give you hints\n")
     if input(f"Would you like to play on easy mode or hard mode?\n") == "hard":
         hardMode = True
         guesses = 5
 
     while not correct and guesses > 0:
-        guess = int(input(f"You have {guesses} guesses remaining.\n Guess a number!\n"))
+        guess = int(input(f"You have {guesses} guesses remaining. \nGuess a number! \n"))
         correct = didIWin(guess, numbertoGuess)
         if not correct:
             guesses -= 1
