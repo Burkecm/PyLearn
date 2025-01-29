@@ -4,13 +4,17 @@ HEADING_LEFT = 180
 HEADING_RIGHT = 0
 HEADING_UP = 90
 HEADING_DOWN = 270
+DEFAULT_LENGTH = 3
+
 class Snake:
-    def __init__(self, length = 3):
+    def __init__(self, length = DEFAULT_LENGTH):
         self.body = []
+        self.make_snake(length)
+        self.head = self.body[0]
+
+    def make_snake(self, length):
         for i in range(0, length+1):
             self.body.append(self.new_segment(0-(SEGMENT_SIZE*i), 0))
-        # self.body = [self.new_segment(0, 0), self.new_segment(-SEGMENT_SIZE, 0), self.new_segment(-2*SEGMENT_SIZE, 0)]
-        self.head = self.body[0]
 
     def new_segment(self, x, y):
         segment = Turtle("square")
@@ -45,3 +49,9 @@ class Snake:
             self.body[segment].goto(x, y)
         self.body[0].forward(SEGMENT_SIZE)
 
+    def reset(self, length=DEFAULT_LENGTH):
+        for segment in self.body:
+            segment.hideturtle()
+        self.body.clear()
+        self.make_snake(length)
+        self.head = self.body[0]
