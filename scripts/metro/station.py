@@ -6,13 +6,3 @@ class Station(Turtle):
         self.coords = coords
         self.teleport(*self.coords)
         self.dot(20)
-        self.stop_number = 1
-        # self.label()
-
-    # def generate_starting_location(self):
-    #     x = 100 * round((rand.randint(-500, 500)/100))
-    #     y = 100 * round((rand.randint(-500, 500)/100))
-    #     return (x, y)
-    
-    # def draw(self):
-    #     self.

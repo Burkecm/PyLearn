@@ -12,7 +12,8 @@ class SubwayMap(Turtle):
         print(self.stations)
 
     def draw_station(self, x, y):
-        self.stations[str(self.next_stop)] = Station((100 * round(x/100), 100 * round(y/100)))
+        # self.stations[str(self.next_stop)] = Station((100 * round(x/100), 100 * round(y/100)))
+        self.stations[str(self.next_stop)] = Station(self.generate_random_location())
         self.next_stop += 1
         print(self.stations)
     
