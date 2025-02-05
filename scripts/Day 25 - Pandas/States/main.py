@@ -13,10 +13,11 @@ def display_state(name, coords):
     map_writer.write(name)
 
 def generate_missed_states(filename):
-    missed_states = []
-    for state in states:
-        if state not in guessed_states:
-            missed_states.append(state)
+    missed_states = [state for state in states if state not in guessed_states]
+    # missed_states = []
+    # for state in states:
+    #     if state not in guessed_states:
+    #         missed_states.append(state)
     (pandas.DataFrame(missed_states)).to_csv(filename)
 
 scr.title("Guess the States")
