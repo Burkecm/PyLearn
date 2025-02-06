@@ -29,13 +29,13 @@ def start_timer():
     global reps
     reps += 1
     if reps % 8 == 0:
-        countdown(LONG_BREAK_MIN)
+        countdown(LONG_BREAK_MIN * 60)
         label.config(text="Break!", fg=RED)
     elif reps % 2 == 0:
-        countdown(SHORT_BREAK_MIN)
+        countdown(SHORT_BREAK_MIN * 60)
         label.config(text="Break!", fg=PINK)
     else:
-        countdown(WORK_MIN)
+        countdown(WORK_MIN * 60)
         label.config(text="Work!", fg=GREEN)
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
